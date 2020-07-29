@@ -27,8 +27,8 @@ export class UserController {
         return this.userService.deleteUser(id);
     }
 
-//     @Put('/:id/edit')
-//     updateUser(@Param('id') id:string, @Body() userDto: UserDto): Promise<User>{
-//         return this.userService.updateUser(id, userDto);
-//     }
+    @Put('/:id')
+    updateUser(@Param('id') id:string, @Body() userDto: UserDto): Promise<User>{
+        return this.userService.updateUser(id, userDto);
+    }
 }

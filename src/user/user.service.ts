@@ -22,9 +22,7 @@ export class UserService {
     }
 
     async createUser(userDto: UserDto): Promise<User> {
-        Logger.log(userDto);
         const createdUser =  new this.userModel(userDto);
-        Logger.log(createdUser)
         return await createdUser.save();
     }
 
@@ -33,6 +31,6 @@ export class UserService {
     }
 
     async updateUser(id: string, userDto: UserDto): Promise<User> {
-        return await this.userModel.findByIdAndUpdate(id, userDto, {new: true});
+        return await this.userModel.findByIdAndUpdate(id, userDto);
     }
 }
