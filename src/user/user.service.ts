@@ -17,7 +17,8 @@ export class UserService {
 
     async getUserById(id: string) {
         let result =  await this.userModel.findById(id);
-        if(!result) throw new NotFoundException();
+        Logger.log(result)
+        if(!result) throw new NotFoundException('Not found a user with this id');
         return result;
     }
 
@@ -27,7 +28,9 @@ export class UserService {
     }
 
     async deleteUser(id: string): Promise<User> {
-        return await this.userModel.findByIdAndDelete(id);
+        let result =  await this.userModel.findByIdAndDelete(id);
+        if (!result) throw new NotFoundException();
+        return result;
     }
 
     async updateUser(id: string, userDto: UserDto): Promise<User> {
