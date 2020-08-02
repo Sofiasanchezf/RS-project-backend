@@ -24,41 +24,35 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+Backend project done with [Nest](https://github.com/nestjs/nest) and [mongoDB](https://www.mongodb.com/es) for the database.
 
+To run the project locally it is necessary to have Node.js. installed and you also need to have a [mongoDB atlas database](https://account.mongodb.com/account/login?n=%2Fv2%2F5f19492ac5c96813a24f59f7&nextHash=%23clusters)
+
+## Database configuration
+
+
+Once you have created the account and the database in mongoDB atlas, for the operation of the application it is necessary to configure the path that appears in app.module.ts (```Mongoose.forRoot ('<complete>?...')``` ); and replace in the part that appears "complete" with your information.
+
+## Steps to run it
+1. Clone this repository
+2. Installation.
 ```bash
 $ npm install
 ```
-
-## Running the app
-
+3. Running the app.
 ```bash
-# development
-$ npm run start
-
-# watch mode
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
+4. It will be available at http://localhost:3000/
 
-## Test
+## Steps to run front-end
+1. Clone the repository:
+2. Follow the instructions of the readme.md of this repository
+3. It will be available at http://localhost:4200/
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
 
 ## Support
 
