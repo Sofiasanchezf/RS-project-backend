@@ -49,7 +49,7 @@ $ npm run start:dev
 4. It will be available at http://localhost:3000/
 
 ## Steps to run front-end
-1. Clone the repository:
+1. Clone the repository: https://github.com/Sofiasanchezf/RS-project 
 2. Follow the instructions of the readme.md of this repository
 3. It will be available at http://localhost:4200/
 
